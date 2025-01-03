@@ -1,0 +1,3 @@
+[submodule "M2_SDE_Assignments/Assignment2_Git/sample-project"]
+	path = M2_SDE_Assignments/Assignment2_Git/sample-project
+	url = https://github.com/BlazingNish/sample-project.git

@@ -1,0 +1,36 @@
+//For setting up the repository locally:
+
+git init sample-project
+cd .\sample-project\
+
+//Add remote origin for the GitHub repo:
+
+git remote add origin https://github.com/BlazingNish/sample-project.git
+git branch -M main
+
+
+//Adding initial readme.md:
+
+echo "#Sample Project" > README.md
+git commit -m "first commit"
+git push -u origin main
+
+//Creating feature/update-readme branch and pushing changes:
+
+git checkout -b feature/update-readme
+git add .\README.md
+git commit -m "Added project discription to README.md"
+git push -u origin feature/update-readme
+
+//Creating Pull request and merging branches:
+
+GitHub Repo>Pull Requests>New Pull requests>Select "feature/update-readme" as the source and "main" as the target branch
+Merge Pull request
+
+//Update local repository and cleanup:
+
+git checkout main
+git pull origin main
+git branch -d feature/update-readme
+git push origin --delete feature/update-readme
+
